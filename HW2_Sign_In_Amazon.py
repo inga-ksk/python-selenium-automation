@@ -11,7 +11,6 @@ driver.get('https://www.amazon.com/')
 
 # click on Orders
 driver.find_element(By.XPATH, '//a[@id="nav-orders"]//span[@class="nav-line-2"]').click()
-
 # verify Sign In Header is visible
 expected_text = 'Sign-In'
 actual_text = driver.find_element(By.XPATH, "//h1[@class='a-spacing-small']").text
