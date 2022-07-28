@@ -5,6 +5,10 @@ def find_unique_letter():
     for i in list_1:
         if list_1.count(i) == 1:
             unique_letters.append(i)
-    print(unique_letters[0])
+            print(unique_letters[0])
+            break
+    else:
+        print("xoxoxo")
+
 
 find_unique_letter()
