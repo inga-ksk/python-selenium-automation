@@ -23,7 +23,6 @@ driver.find_element(By.CSS_SELECTOR, "input#add-to-cart-button").click()
 #driver.find_element(By.CSS_SELECTOR, "input[aria-labelledby='attachSiNoCoverage-announce']").click()
 
 #verify item is in cart
-# sleep(5)
 expected_text = 'Added to Cart'
 actual_text = driver.find_element(By.CSS_SELECTOR, "span.a-size-medium-plus").text
 assert actual_text == expected_text, f'Expected {expected_text} but got {actual_text}'
