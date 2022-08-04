@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
-from time import sleep
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 @given('Open Amazon main page')
 def open_amazon(context):
@@ -9,7 +10,6 @@ def open_amazon(context):
 @when('Click on the cart icon')
 def click_on_cart(context):
     context.driver.find_element(By.CSS_SELECTOR, ".nav-cart-icon.nav-sprite").click()
-    sleep(4)
 
 @then('Verify product count equals to 0')
 def check_item_count(context):
