@@ -6,3 +6,4 @@ Feature: Test scenario for bestsellers page
     Given Open Amazon main page
     When Click on bestsellers link
     Then Verify 5 bestseller links are shown
+    And Click on each top link and Verify that correct page opens
