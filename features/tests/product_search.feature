@@ -3,7 +3,7 @@ Feature: Test Scenarios for Search functionality
 
   Scenario: User can search for a product
     Given Open Google page
-    When Input  T-shirt  into search field
+    When Input  backpack  into search field
     And Click on search icon
-    Then Product results for T-Shirt are shown
-    And first result shows T-shirt
+    Then Product results for backpack are shown
+    And First result shows backpack

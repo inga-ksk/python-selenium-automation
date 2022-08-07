@@ -9,15 +9,14 @@ SEARCH_ITEM_IMAGE = (By.CSS_SELECTOR, 'div[cel_widget_id^="MAIN-SEARCH_RESULTS"]
 
 @given('Open Amazon page')
 def open_google(context):
-    context.driver.get('https://www.amazon.com/')
-
+    context.app.main_page.open_main()
 
 @when('Input {search_word} into Amazon search field')
 def input_search(context, search_word):
-    search = context.driver.find_element(*SEARCH_INPUT)
-    search.clear()
-    search.send_keys(search_word)
-
+    # search = context.driver.find_element(*SEARCH_INPUT)
+    # search.clear()
+    # search.send_keys(search_word)
+    context.app.header.search_product(search_word)
 
 @when('Click on Amazon search icon')
 def click_search_icon(context):
